@@ -14,7 +14,7 @@ Implementation of robust dynamic Hamiltonian Monte Carlo methods in Julia.
 
 This package implements a modern version of the “No-U-turn sampler” in the Julia language, mostly as described in [Betancourt (2017)](https://arxiv.org/abs/1701.02434), with some tweaks.
 
-In contrast to frameworks which utilize a directed acyclic graph to build a posterior for a Bayesian model from small components, this package requires that you code a *log-density function* of the posterior in Julia. Derivatives can be provided manually, or using [automatic differentiation](http://www.juliadiff.org/). Use of `Float32` (or other) floating number types promotes into computations.
+In contrast to frameworks which utilize a directed acyclic graph to build a posterior for a Bayesian model from small components, this package requires that you code a *log-density function* of the posterior in Julia. Derivatives can be provided manually, or using [automatic differentiation](http://www.juliadiff.org/). Use of `Float32` (or other) floating number types promotes into underlying computations.
 
 Consequently, this package requires that the user is comfortable with the basics of the theory of Bayesian inference, to the extent of coding a (log) posterior density in Julia. This approach allows the use of standard tools like [profiling](https://docs.julialang.org/en/v1/manual/profile/) and [benchmarking](https://github.com/JuliaCI/BenchmarkTools.jl) to optimize its [performance](https://docs.julialang.org/en/v1/manual/performance-tips/).
 
